@@ -1,0 +1,43 @@
+[
+  {
+    "Key": "LOTP.Settings.Title",
+    "ProcessTemplates": false,
+    "enGB": "Libram Of The Phoenix"
+  },
+
+  {
+    "Key": "LOTP.Settings.VerboseLogging",
+    "ProcessTemplates": false,
+    "enGB": "Enable Detailed Logs",
+    "zhCN": "允许详细日志",
+    "ruRU": "Включить подробный лог игры",
+    "esES": "Habilitar registros detallados"
+  },
+  {
+    "Key": "LOTP.Settings.CleanupEldrichScion",
+    "enGB": "Eldritch Scion: Cleanup Progression"
+  },
+  {
+    "Key": "LOTP.Settings.CleanupEldrichScion.Desc",
+    "enGB": "Dynamically kills weird add / remove of Arcane Weapon upgrades on Eldritch Scion"
+  },
+
+  {
+    "Key": "LOTP.Settings.BuffedElementalStrikes",
+    "enGB": "Buffed Elemental Strikes"
+  },
+  {
+    "Key": "LOTP.Settings.BuffedElementalStrikes.Desc",
+    "enGB": "Bloodrager elemental bloodline elemental strikes now start always-on at level 1, and gain an on-critical burst effect at level 20"
+  },
+
+  {
+    "Key": "LOTP.Settings.InternalBuffer",
+    "enGB": "Restore Internal Buffer"
+  },
+  {
+    "Key": "LOTP.Settings.InternalBufferDesc",
+    "enGB": "Adds missing Kineticist class feature - Internal Buffer"
+  }
+
+]

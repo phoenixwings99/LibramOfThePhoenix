@@ -1,0 +1,11 @@
+[
+
+  {
+    "Key": "ElementalStrikesBurstBuff",
+    "enGB": "Elemental Strikes - Burst"
+  },
+  {
+    "Key": "ElementalStrikesBurstBuff.Desc",
+    "enGB": "Elemental Strikes deal 1d8 elemental damage, multiplied by the weapon's critical modifier, on crits."
+  }
+]

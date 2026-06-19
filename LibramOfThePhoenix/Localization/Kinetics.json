@@ -1,0 +1,26 @@
+[
+  {
+    "Key": "InternalBuffer",
+    "enGB": "Internal Buffer"
+  },
+  {
+    "Key": "InternalBuffer.Desc",
+    "enGB": "At 6th level, a kineticist’s study of her body and the elemental forces that course through it allow her to form an internal buffer to store extra energy.\nWhen she would otherwise accept burn, a kineticist can spend energy from her buffer to avoid accepting 1 point of burn. She can do it once per day. Kineticist gets an additional use of this ability at levels 11 and 16."
+  },
+  {
+    "Key": "InternalBufferBuff",
+    "enGB": "Internal Buffer Active"
+  },
+  {
+    "Key": "InternalBufferBuff.Desc",
+    "enGB": "Internal Buffer is active, mitigating 1 point of burn from any source."
+  },
+  {
+    "Key": "InternalBufferResource",
+    "enGB": "Internal Buffer Uses."
+  },
+  {
+    "Key": "InternalBuffer.ExtraUse",
+    "enGB": "Internal Buffer (Extra Use)"
+  }
+]
