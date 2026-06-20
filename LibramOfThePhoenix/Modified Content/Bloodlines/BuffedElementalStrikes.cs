@@ -40,7 +40,7 @@ namespace LibramOfThePhoenix.Modified_Content.Bloodlines
                 void AlterBloodline(string strikesBaseFeature, string strikesBuff, string strikes20Feature, DamageEnergyType energy)
                 {
                     string sysname = $"ElementalStrikes{energy}BurstBuff";
-                    var guid = Main.LotPContext.Blueprints.GetGUID(sysname);
+                    Kingmaker.Blueprints.BlueprintGuid guid = Main.LotPContext.Blueprints.GetGUID(sysname);
 
                     var at20Buff = BuffConfigurator.New(sysname, guid.ToString()).SetFlags(flags: BlueprintBuff.Flags.HiddenInUi);
                     at20Buff.SetDisplayName(LocalizationTool.GetString("ElementalStrikesBurstBuff"));
@@ -69,8 +69,9 @@ namespace LibramOfThePhoenix.Modified_Content.Bloodlines
                 List<DamageEnergyType> energies = new() { DamageEnergyType.Fire, DamageEnergyType.Cold, DamageEnergyType.Electricity, DamageEnergyType.Acid };
                 foreach (var energy in energies)
                 {
+
                     string sysname = $"ElementalStrikes{energy}BurstBuff";
-                    var guid = Main.LotPContext.Blueprints.GetGUID(sysname);
+                    var guid = Main.LotPContext.Blueprints.GetGUID (sysname);
 
                     var at20Buff = BuffConfigurator.New(sysname, guid.ToString()).SetFlags(flags: BlueprintBuff.Flags.HiddenInUi).Configure();
                 }

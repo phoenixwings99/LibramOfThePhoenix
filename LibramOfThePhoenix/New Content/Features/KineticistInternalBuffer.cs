@@ -67,7 +67,7 @@ namespace LibramOfThePhoenix.New_Content.Features
             featureConfig.AddAbilityResources(0, resourceMade, restoreOnLevelUp: true);
             BlueprintFeature feature = featureConfig.Configure();
 
-            FeatureConfigurator featureConfig2 = FeatureConfigurator.New("InternalBufferExtraUseFeature", Main.LotPContext.Blueprints.GetGUID("InternalBufferFeature").m_Guid.ToString())
+            FeatureConfigurator featureConfig2 = FeatureConfigurator.New("InternalBufferExtraUseFeature", Main.LotPContext.Blueprints.GetGUID("InternalBufferExtraUseFeature").m_Guid.ToString())
                 .SetDisplayName("InternalBuffer.ExtraUse").SetDescription("InternalBuffer.Desc").SetIcon(icon);
             
             featureConfig2.SetIsClassFeature(true);

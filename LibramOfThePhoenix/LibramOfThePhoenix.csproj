@@ -26,7 +26,7 @@
 	</ItemGroup>
   <ItemGroup>
     <None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
-    <EmbeddedResource Include="Config/Blueprints.json" CopyToOutputDirectory="PreserveNewest" />
+
   </ItemGroup>
 	<Target Name="ILRepack" AfterTargets="Build">
 		<ItemGroup>
@@ -68,7 +68,9 @@
 	</ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\Kinetics.json" />
+    <EmbeddedResource Include="Localization\Modifications.json" />
     <EmbeddedResource Include="Localization\Settings.json" />
+    <EmbeddedResource Include="Config\Blueprints.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   
   <ItemGroup>

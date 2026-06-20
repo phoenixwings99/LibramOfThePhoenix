@@ -1,26 +1,35 @@
-﻿using HarmonyLib;
-using System.Text;
-using System.Reflection;
-using UnityModManagerNet;
-using BlueprintCore.Utils;
+﻿using BlueprintCore.Utils;
+using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
+using Kingmaker.PubSubSystem;
+using System.Reflection;
+using System.Text;
+using TabletopTweaks.Core.NewEvents;
+using UnityModManagerNet;
 
 namespace LibramOfThePhoenix;
 
 public static class Main
 {
+    private static readonly Logging.Logger Logger = Logging.GetLogger(nameof(Main));
     internal static Harmony HarmonyInstance;
-    internal static UnityModManager.ModEntry.ModLogger Log;
+
     internal static LotPModContext LotPContext;
 
     public static bool Load(UnityModManager.ModEntry modEntry)
     {
-        Log = modEntry.Logger;
+
+        
         modEntry.OnGUI = OnGUI;
         HarmonyInstance = new Harmony(modEntry.Info.Id);
         LotPContext = new(modEntry);
+#if DEBUG
+        LotPContext.Debug = true;
+        LotPContext.Blueprints.Debug = true;
+#endif
         try
         {
+            EventBus.Subscribe(new BlueprintCacheInitHandler());
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
         }
         catch
@@ -29,6 +38,47 @@ public static class Main
             throw;
         }
         return true;
+    }
+
+    class BlueprintCacheInitHandler : IBlueprintCacheInitHandler
+    {
+        private static bool Initialized = false;
+        private static bool InitializeDelayed = false;
+
+        public void AfterBlueprintCacheInit()
+        {
+            
+        }
+
+        public void AfterBlueprintCachePatches()
+        {
+            try
+            {
+                if (InitializeDelayed)
+                {
+                    Logger.Log("Already initialized blueprints cache.");
+                    return;
+                }
+                InitializeDelayed = true;
+                Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafterLast();
+                Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRiderLate();
+
+            }
+            catch (Exception e)
+            {
+                Logger.LogException("Delayed blueprint configuration failed.", e);
+            }
+        }
+
+        public void BeforeBlueprintCacheInit()
+        {
+            
+        }
+
+        public void BeforeBlueprintCachePatches()
+        {
+            
+        }
     }
 
     public static void OnGUI(UnityModManager.ModEntry modEntry)
@@ -49,46 +99,34 @@ public static class Main
             {
                 if (Initialized)
                 {
-                    Log.Log("Already initialized blueprints cache.");
+                    Logger.Log("Already initialized blueprints cache.");
                     return;
                 }
                 Initialized = true;
                 LocalizationTool.LoadEmbeddedLocalizationPacks(
-                  "LibramOfThePhoenix.Localization.Settings.json"
+                  "LibramOfThePhoenix.Localization.Settings.json",
+                  "LibramOfThePhoenix.Localization.Kinetics.json",
+                  "LibramOfThePhoenix.Localization.Modifications.json"
                   );
-                Log.Log("Patching blueprints.");
+                Logger.Log("Patching blueprints.");
                 Settings.Init();
                 Bugfixes.Classes.Magus.EScionSanityCheck();
                 Modified_Content.Bloodlines.BuffedElementalStrikes.Do();
                 New_Content.Features.KineticistInternalBuffer.Make();
+                Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafter();
+                Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRider();
                 // Insert your mod's patching methods here
                 // Example
                 // SuperAwesomeFeat.Configure()
             }
             catch (Exception e)
             {
-                Log.Log(string.Concat("Failed to initialize.", e));
+                Logger.Log(string.Concat("Failed to initialize.", e));
             }
         }
     }
 
-    [HarmonyPatch(typeof(BlueprintsCache), "Init")]
-    static class BlueprintsCache_Init_Patch2
-    {
-        static bool Initialized;
 
-        [HarmonyPriority(Priority.Last)]
-        static void Postfix()
-        {
-            try
-            {
-                Modified_Content.Classes.Kineticist.PatchKineticistLate();
-            }
-            catch (Exception e)
-            {
 
-                Main.LotPContext.Logger.LogError(e, $"Error caught in Late patch");
-            }
-        }
-    }
+    
 }

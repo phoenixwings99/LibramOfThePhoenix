@@ -14,20 +14,20 @@
     "esES": "Habilitar registros detallados"
   },
   {
-    "Key": "LOTP.Settings.CleanupEldrichScion",
+    "Key": "LOTP.Settings.CleanupEldritchScion",
     "enGB": "Eldritch Scion: Cleanup Progression"
   },
   {
-    "Key": "LOTP.Settings.CleanupEldrichScion.Desc",
+    "Key": "LOTP.Settings.CleanupEldritchScion.Desc",
     "enGB": "Dynamically kills weird add / remove of Arcane Weapon upgrades on Eldritch Scion"
   },
 
   {
-    "Key": "LOTP.Settings.BuffedElementalStrikes",
+    "Key": "LOTP.Settings.BuffElementalStrikes",
     "enGB": "Buffed Elemental Strikes"
   },
   {
-    "Key": "LOTP.Settings.BuffedElementalStrikes.Desc",
+    "Key": "LOTP.Settings.BuffElementalStrikes.Desc",
     "enGB": "Bloodrager elemental bloodline elemental strikes now start always-on at level 1, and gain an on-critical burst effect at level 20"
   },
 
@@ -36,7 +36,7 @@
     "enGB": "Restore Internal Buffer"
   },
   {
-    "Key": "LOTP.Settings.InternalBufferDesc",
+    "Key": "LOTP.Settings.InternalBuffer.Desc",
     "enGB": "Adds missing Kineticist class feature - Internal Buffer"
   }
 

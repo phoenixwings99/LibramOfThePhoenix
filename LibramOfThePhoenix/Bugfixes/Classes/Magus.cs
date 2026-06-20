@@ -11,13 +11,14 @@ namespace LibramOfThePhoenix.Bugfixes.Classes
 {
     public class Magus
     {
+        private static readonly Logging.Logger Logger = Logging.GetLogger(nameof(Bugfixes.Classes.Magus));
         public static void EScionSanityCheck()
         {
             if (Settings.IsDisabled("CleanupEldritchScion"))
                 return;
 
             BlueprintArchetype escion = BlueprintTool.Get<BlueprintArchetype>("d078b2ef073f2814c9e338a789d97b73");
-            BlueprintArchetype escionSage = BlueprintTool.Get<BlueprintArchetype>("EldritchScionSageArchetype");
+            //BlueprintArchetype escionSage = BlueprintTool.Get<BlueprintArchetype>("EldritchScionSageArchetype");
             List<Tuple<int, string>> levelArcaneWeaponPairs = new();
             levelArcaneWeaponPairs.Add(new(5, "36b609a6946733c42930c55ac540416b"));
             levelArcaneWeaponPairs.Add(new(9, "70be888059f99a245a79d6d61b90edc5"));
@@ -25,10 +26,10 @@ namespace LibramOfThePhoenix.Bugfixes.Classes
             levelArcaneWeaponPairs.Add(new(17, "3cbe3e308342b3247ba2f4fbaf5e6307"));
 
             CleanArche(escion, levelArcaneWeaponPairs);
-            if (escionSage != null)
+            /*if (escionSage != null)
             {
                 CleanArche(escionSage, levelArcaneWeaponPairs);
-            }
+            }*/
         }
         private static void CleanArche(BlueprintArchetype arche, List<Tuple<int, string>> levelArcaneWeaponPairs)
         {
@@ -43,11 +44,11 @@ namespace LibramOfThePhoenix.Bugfixes.Classes
                 bool killedAdd = addlist.m_Features.Remove(weapon);
                 bool killedRemove = removeList.m_Features.Remove(weapon);
                 if (killedAdd)
-                    Main.Log.Log($"killed add element of add/remove cancelling pair on escion level {pair.Item1}");
+                    Logger.Log($"killed add element of add/remove cancelling pair on escion level {pair.Item1}");
                 if (killedRemove)
-                    Main.Log.Log($"killed remove element of add/remove cancelling pair on escion level {pair.Item1}");
+                    Logger.Log($"killed remove element of add/remove cancelling pair on escion level {pair.Item1}");
                 if (killedAdd != killedRemove)
-                    Main.Log.Log($"redundancy kill incomplete on escion level {pair.Item1}");
+                    Logger.Log($"redundancy kill incomplete on escion level {pair.Item1}");
 
             }
         }
