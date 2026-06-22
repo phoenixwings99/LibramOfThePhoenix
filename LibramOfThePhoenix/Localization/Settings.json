@@ -38,6 +38,29 @@
   {
     "Key": "LOTP.Settings.InternalBuffer.Desc",
     "enGB": "Adds missing Kineticist class feature - Internal Buffer"
+  },
+  {
+    "Key": "LOTP.Settings.HexcrafterArcanaSelection",
+    "enGB": "Hexcrafter Arcana Selection Integration"
+  },
+  {
+    "Key": "LOTP.Settings.HexcrafterArcanaSelection.Desc",
+    "enGB": "Changes Hexcrafter Arcana/Hex selection to a sub-selection of regular arcana selection that requires the hexcrafter archetype. This should permit more valid multi-archetypes."
+  },
+  {
+    "Key": "LOTP.Settings.ArcaneRiderFeatSelection",
+    "enGB": "Arcane Rider Feat Selection Integration"
+  },
+  {
+    "Key": "LOTP.Settings.ArcaneRiderFeatSelection.Desc",
+    "enGB": "Changes Armored Rider Feat Selection to a sub-selection of normal magus feat selection. This permits more multi-archetypes and improves mod compatibility in the event of Mounted Combat group feats that are not also Combat group feats. (Yes, that is the only case where Arcane Rider's altered feat selection actually does anything."
+  },
+  {
+    "Key": "LOTP.Settings.AzataSorcererBloodline",
+    "enGB": "Azata Sorcerer Bloodline"
+  },
+  {
+    "Key": "LOTP.Settings.AzataSorcererBloodline.Desc",
+    "enGB": "Adds 3pp Azata Sorcerer Bloodline. Requires TabletopTweaksCore for bloodline tooling."
   }
-
 ]

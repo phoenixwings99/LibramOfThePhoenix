@@ -67,6 +67,7 @@
 	  <Folder Include="New Content\Archetypes\" />
 	</ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Localization\Bloodlines.json" />
     <EmbeddedResource Include="Localization\Kinetics.json" />
     <EmbeddedResource Include="Localization\Modifications.json" />
     <EmbeddedResource Include="Localization\Settings.json" />

@@ -37,6 +37,9 @@ namespace LibramOfThePhoenix
             settings.AddToggle(MakeToggle("CleanupEldritchScion", true,true));
             settings.AddToggle(MakeToggle("BuffElementalStrikes", true,true));
             settings.AddToggle(MakeToggle("InternalBuffer", true,true));
+            settings.AddToggle(MakeToggle("HexcrafterArcanaSelection", true,true));
+            settings.AddToggle(MakeToggle("ArcaneRiderFeatSelection", true,true));
+            settings.AddToggle(MakeToggle("AzataSorcererBloodline", true,true));
 
 
             Menu.AddSettings(settings);

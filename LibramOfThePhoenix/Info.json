@@ -8,5 +8,6 @@
   "AssemblyName": "LibramOfThePhoenix.dll",
   "EntryMethod": "LibramOfThePhoenix.Main.Load",
   "HomePage": "",
-  "Repository": ""
+  "Repository": "",
+  "LoadAfter": ["TableTopTweaks-Base"]
 }

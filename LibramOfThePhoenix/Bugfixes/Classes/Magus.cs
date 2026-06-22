@@ -17,7 +17,7 @@ namespace LibramOfThePhoenix.Bugfixes.Classes
             if (Settings.IsDisabled("CleanupEldritchScion"))
                 return;
 
-            BlueprintArchetype escion = BlueprintTool.Get<BlueprintArchetype>("d078b2ef073f2814c9e338a789d97b73");
+            
             //BlueprintArchetype escionSage = BlueprintTool.Get<BlueprintArchetype>("EldritchScionSageArchetype");
             List<Tuple<int, string>> levelArcaneWeaponPairs = new();
             levelArcaneWeaponPairs.Add(new(5, "36b609a6946733c42930c55ac540416b"));
@@ -25,7 +25,7 @@ namespace LibramOfThePhoenix.Bugfixes.Classes
             levelArcaneWeaponPairs.Add(new(13, "1804187264121cd439d70a96234d4ddb"));
             levelArcaneWeaponPairs.Add(new(17, "3cbe3e308342b3247ba2f4fbaf5e6307"));
 
-            CleanArche(escion, levelArcaneWeaponPairs);
+            CleanArche(BlueprintTool.Get<BlueprintArchetype>("EldritchScionArchetype"), levelArcaneWeaponPairs);
             /*if (escionSage != null)
             {
                 CleanArche(escionSage, levelArcaneWeaponPairs);

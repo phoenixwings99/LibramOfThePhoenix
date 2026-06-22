@@ -2,6 +2,7 @@
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.PubSubSystem;
+using LibramOfThePhoenix.New_Content.Bloodlines;
 using System.Reflection;
 using System.Text;
 using TabletopTweaks.Core.NewEvents;
@@ -80,6 +81,11 @@ public static class Main
             
         }
     }
+    private static bool? TTCInstalled;
+    public static bool IsTTCInstalled()
+    {
+        return TTCInstalled ??= UnityModManager.modEntries.Exists(x => x.Info.Id.Equals("TabletopTweaks-Core"));
+    }
 
     public static void OnGUI(UnityModManager.ModEntry modEntry)
     {
@@ -105,16 +111,19 @@ public static class Main
                 Initialized = true;
                 LocalizationTool.LoadEmbeddedLocalizationPacks(
                   "LibramOfThePhoenix.Localization.Settings.json",
+                  "LibramOfThePhoenix.Localization.Bloodlines.json",
                   "LibramOfThePhoenix.Localization.Kinetics.json",
                   "LibramOfThePhoenix.Localization.Modifications.json"
                   );
                 Logger.Log("Patching blueprints.");
                 Settings.Init();
+                RefData.Load();
                 Bugfixes.Classes.Magus.EScionSanityCheck();
                 Modified_Content.Bloodlines.BuffedElementalStrikes.Do();
                 New_Content.Features.KineticistInternalBuffer.Make();
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafter();
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRider();
+                AzataBloodline.Make();
                 // Insert your mod's patching methods here
                 // Example
                 // SuperAwesomeFeat.Configure()
