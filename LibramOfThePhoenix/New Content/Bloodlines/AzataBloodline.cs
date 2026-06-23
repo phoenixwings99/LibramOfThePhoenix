@@ -514,6 +514,7 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     FeatureConfigurator.For($"SorcererAzataSpell{i + 1}Feature")
                         .AddKnownSpell(characterClass: "SorcererClass", spell: spells[i], spellLevel: i + 1)
                         .AddKnownSpell(characterClass: "MagusClass", archetype: "EldritchScionArchetype", spell: spells[i], spellLevel: i + 1)
+                        .SetIcon(spells[i].Icon)
                         .AddPrerequisiteNoArchetype(characterClass: "SorcererClass", archetype: "65a630aa291f65047b90a2af5df75d83")
                         .AddPrerequisiteNoArchetype(characterClass: "SorcererClass", archetype: "a0e56a59ad0b44b8add84185da6bb845")
                         .AddSpellsToDescription(spells: new List<Blueprint<BlueprintAbilityReference>>() { spells[i] })

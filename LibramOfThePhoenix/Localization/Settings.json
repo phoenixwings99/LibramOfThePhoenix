@@ -62,5 +62,9 @@
   {
     "Key": "LOTP.Settings.AzataSorcererBloodline.Desc",
     "enGB": "Adds 3pp Azata Sorcerer Bloodline. Requires TabletopTweaksCore for bloodline tooling."
+  },
+  {
+    "Key": "LOTP.Settings.BloodHavoc",
+    "enGB": "Blood Havoc"
   }
 ]

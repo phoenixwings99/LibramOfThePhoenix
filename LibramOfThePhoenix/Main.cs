@@ -124,6 +124,7 @@ public static class Main
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafter();
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRider();
                 AzataBloodline.Make();
+                BloodHavoc.Setup();
                 // Insert your mod's patching methods here
                 // Example
                 // SuperAwesomeFeat.Configure()
