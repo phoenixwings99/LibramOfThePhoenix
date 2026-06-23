@@ -46,9 +46,11 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
 {
     internal class AzataBloodline
     {
-         
+        private static readonly Logging.Logger Logger = Logging.GetLogger(nameof(AzataBloodline));
+
         public static void Make()
         {
+            Logger.Log("Building Azata Bloodline blank blueprints");
             BlueprintAbility[] spells = new BlueprintAbility[9];
             spells[0] = BlueprintTool.Get<BlueprintAbility>("ChallengeEvil");//Temporary Placeholder for https://www.aonprd.com/SpellDisplay.aspx?ItemName=alluring%20light
             spells[1] = BlueprintTool.Get<BlueprintAbility>("HideousLaughter");//Placeholder for https://www.aonprd.com/SpellDisplay.aspx?ItemName=blessing%20of%20liberty 
@@ -218,6 +220,7 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
 
             if (Settings.IsEnabled("AzataSorcererBloodline") && Main.IsTTCInstalled())
             {
+                Logger.Log("Building Azata Bloodline");
                 BlueprintFeatureReference BloodlineRequisiteFeature = BlueprintTools.GetBlueprint<BlueprintFeature>("e2cfd3ce-df7c-4008-8b25-aa82d6db3c77").ToReference<BlueprintFeatureReference>();
 
                 FeatureConfigurator.For("SorcererAzataBloodlineArcana")
@@ -226,7 +229,7 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .SetReapplyOnLevelUp(true)
                     .SetRanks(1)
                     .Configure();
-
+                Logger.Log("Built Azata Bloodline Arcana");
 
                 FeatureConfigurator.For("SorcererAzataRayOfStarlightFeature").AddFacts(["SorcererAzataRayOfStarlightAbility"])
                     .AddAbilityResources(resource: "SorcererAzataRayOfStarlightResource")
@@ -264,6 +267,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .SetMaxAmount(ResourceAmountBuilder.New(2).IncreaseByStat(Kingmaker.EntitySystem.Stats.StatType.Charisma))
                     .Configure();
 
+                Logger.Log("Built Azata Bloodline Ray Of Starlight Power");
+
                 FeatureConfigurator.For("SorcererAzataElysianResistancesFeature")
                     .AddFeatureOnClassLevel(clazz: "SorcererClass", additionalClasses: new() { "MagusClass" }, archetypes: new() { "EldritchScionArchetype" }, beforeThisLevel: true, level: 9, feature: "SorcererAzataElysianResistancesEffectFeature")
                     .AddFeatureOnClassLevel(clazz: "SorcererClass", additionalClasses: new() { "MagusClass" }, archetypes: new() { "EldritchScionArchetype" }, beforeThisLevel: false, level: 9, feature: "SorcererAzataElysianResistances2EffectFeature")
@@ -293,6 +298,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                    .SetReapplyOnLevelUp(true)
                    .Configure();
 
+                Logger.Log("Built Azata Bloodline Elysian Resistances Power");
+
                 FeatureConfigurator.For("SorcererAzataSongOfHeroesFeature")
                     .AddIncreaseResourcesByClass(resource: "e190ba276831b5c4fa28737e5e49e6a6", characterClass: "SorcererClass", archetype: "EldritchScionArchetype")
                     .AddFacts(facts: ["5250fe10c377fdb49be449dfe050ba70", "be36959e44ac33641ba9e0204f3d227b"])
@@ -306,6 +313,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .SetIsClassFeature(true)
                     .SetReapplyOnLevelUp(true)
                     .Configure();
+
+                Logger.Log("Built Azata Bloodline Song Of Heroes Power");
 
                 FeatureConfigurator.For("SorcererAzataResplendantFormFeature")
                     .AddFacts(["SorcererAzataResplendantFormAbility"])
@@ -346,6 +355,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .SetFlags()
                     .Configure();
 
+                Logger.Log("Built Azata Bloodline Resplendant Form Power");
+
                 FeatureConfigurator.For("SorcererAzataSoverignOfStarsFeature")
                     .AddEnergyDamageImmunity(DamageEnergyType.Electricity)
                     .AddConditionImmunity(UnitCondition.Petrified)
@@ -353,6 +364,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .AddDamageResistancePhysical(alignment: DamageAlignment.Evil, bypassedByAlignment: true, value: ContextValues.Constant(15))
                     .AddDamageResistancePhysical(material: PhysicalDamageMaterial.ColdIron, bypassedByMaterial: true, value: ContextValues.Constant(15))
                     .Configure();
+
+                Logger.Log("Built Azata Bloodline Soveriegn of Stars Capstone");
 
                 ProgressionConfigurator.For("SorcererAzataBloodline")
                     .SetIsClassFeature(true)
@@ -377,6 +390,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .AddPrerequisiteNoFeature(feature: "AzataBloodlineRequisiteFeature", group: Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite.GroupType.Any)
                     .Configure();
 
+                Logger.Log("Built Azata Bloodline Progression");
+
                 ProgressionConfigurator.For(seekerbloodline)
                     .SetIsClassFeature(true)
                     .SetClasses("SorcererClass", "MagusClass")
@@ -400,6 +415,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .AddPrerequisiteNoFeature(feature: "AzataBloodlineRequisiteFeature", group: Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite.GroupType.Any)
                     .Configure();
 
+                Logger.Log("Built Azata Bloodline Seeker Progression");
+
                 ProgressionConfigurator.For(crossbloodedbloodline)
                    .SetIsClassFeature(true)
                    .SetClasses("SorcererClass", "MagusClass")
@@ -417,6 +434,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .AddPrerequisiteNoFeature(feature: "AzataBloodlineRequisiteFeature", group: Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite.GroupType.Any)
                    .Configure();
 
+                Logger.Log("Built Azata Bloodline Crossblooded Progression");
+
                 FeatureSelectionConfigurator.For("SorcererAzataFeatSelection")
                     .SetRanks(1)
                     .SetIsClassFeature(true)
@@ -424,10 +443,12 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .SetHideNotAvailibleInUI(true)
                     .AddToAllFeatures("Dodge", "ImprovedInitiative", "IronWill", "SpellFocusEnchantment", "Mobility", "WeaponFinesse")//Missing: https://www.aonprd.com/FeatDisplay.aspx?ItemName=Dazing%20Spell , https://www.aonprd.com/FeatDisplay.aspx?ItemName=Free%20Spirit
                     .Configure();
-                //Add Slashing Grace as replacement for WFinesse if auto-give-base-feats mods are active
-                
 
-                
+                Logger.Log("Built Azata Bloodline Bonus Feats");
+                //Add Slashing Grace as replacement for WFinesse if auto-give-base-feats mods are active
+
+
+
 
 
                 List<BlueprintArchetypeReference> inspireCourageArches = new();
@@ -500,7 +521,7 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                     .AddAbilityAreaEffectBuff(buff: "6d6d9e06b76f5204a8b7856c78607d5d", condition: ConditionsBuilder.New().IsAlly())
                     .Configure();
 
-
+                Logger.Log("Modified Bardic Performance Resource and Scaling to support Azata Bloodline");
 
                 BloodlineTools.RegisterSorcererFeatSelection(featselecton, basebloodline);
 
@@ -508,8 +529,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                 BloodlineTools.RegisterSorcererBloodline(basebloodline);
                 BloodlineTools.RegisterCrossbloodedBloodline(crossbloodedbloodline);
                 BloodlineTools.RegisterSeekerBloodline(seekerbloodline);
-
-                for(int i = 0; i < 9; i++)
+                Logger.Log("Ran BlueprintTools");
+                for (int i = 0; i < 9; i++)
                 {
                     FeatureConfigurator.For($"SorcererAzataSpell{i + 1}Feature")
                         .AddKnownSpell(characterClass: "SorcererClass", spell: spells[i], spellLevel: i + 1)
@@ -519,8 +540,10 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
                         .AddPrerequisiteNoArchetype(characterClass: "SorcererClass", archetype: "a0e56a59ad0b44b8add84185da6bb845")
                         .AddSpellsToDescription(spells: new List<Blueprint<BlueprintAbilityReference>>() { spells[i] })
                         .Configure();
-
+                    Logger.Log($"Built Azata Bloodline Spell Feature {spells[i].NameSafe()} ");
                 }
+
+
 
             }
         }

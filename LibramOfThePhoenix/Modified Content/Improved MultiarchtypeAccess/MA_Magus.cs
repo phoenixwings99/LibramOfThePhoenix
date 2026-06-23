@@ -62,6 +62,7 @@ namespace LibramOfThePhoenix.Modified_Content.Improved_MultiarchtypeAccess
                 .RemoveFromRemoveFeatures(11, "66befe7b24c42dd458952e3c47c93563")
                 .RemoveFromRemoveFeatures(17, "66befe7b24c42dd458952e3c47c93563")
                 .Configure();
+            Logger.Log("Removed Arcane Rider special bonus feat selection");
         }
 
         public static void FreeUpArcaneRiderLate()
@@ -70,7 +71,9 @@ namespace LibramOfThePhoenix.Modified_Content.Improved_MultiarchtypeAccess
                 return;
 
             FeatureSelectionConfigurator.For("8e627812dc034b9db12fa396fdc9ec75").SetGroup(FeatureGroup.MountedCombatFeat).SetGroup2(FeatureGroup.None).AddPrerequisiteArchetypeLevel(archetype: "79ccf7a306a5d5547bebd97299f6fc89", characterClass: "MagusClass").Configure();
+            Logger.Log("Moved mounted combat feats into subfolder of magus bonus feat selection");
             FeatureSelectionConfigurator.For("66befe7b24c42dd458952e3c47c93563").AddToAllFeatures("8e627812dc034b9db12fa396fdc9ec75").Configure();
+            Logger.Log("Added arcane rider level requirement to mounted combat feat subselection");
         }
     }
 }

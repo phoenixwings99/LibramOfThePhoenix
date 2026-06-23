@@ -67,5 +67,13 @@
   {
     "Key": "SorcererAzataSpellFeature.Desc",
     "enGB": "At 3rd level, and every two levels thereafter, a sorcerer learns an additional {g|Encyclopedia:Spell}spell{/g}, derived from her bloodline. These spells are in addition to the number of spells given at new levels."
+  },
+  {
+    "Key": "BloodHavocFeature",
+    "enGB": "Bloodline Mutation: Blood Havoc"
+  },
+  {
+    "Key": "BloodHavocFeature.Desc",
+    "enGB": "Whenever you cast a bloodrager or sorcerer spell that deals damage, add 1 point of damage per die rolled. This benefit applies only to damaging spells that belong to schools you have selected with Spell Focus or that are bloodline spells for your bloodline.."
   }
 ]

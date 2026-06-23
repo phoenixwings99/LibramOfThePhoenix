@@ -2,19 +2,20 @@
 
   "OverrideIds": false,
   "NewBlueprints": {
+    "AzataBloodlineLevelUnitProperty": "c0739c77-5575-4459-8eff-a039f33b6474",
+    "AzataBloodlineRequisiteFeature": "1b0fbd71-d0d2-4402-a096-28124d776dc4",
+    "BloodHavocFeature": "f3287a86-7ed7-4554-a689-725f8d026e7c",
+    "CrossbloodedAzataBloodline": "0d1872cb-64d3-4416-941c-6c86903dab44",
+    "ElementalStrikesAcidBurstBuff": "db73ded7-381c-40fe-a2ba-5d5995f30345",
+    "ElementalStrikesColdBurstBuff": "c666499d-1fa9-45df-bf10-175b2b3de2c4",
+    "ElementalStrikesElectricityBurstBuff": "9821cbbd-dee1-464a-baa7-002c4786294e",
+    "ElementalStrikesFireBurstBuff": "e66ad7ba-fe84-43db-b9bc-f2f762c13bea",
+    "InspireCourageScalingUnitProperty": "d99e3062-363d-42f4-8693-5f6616088592",
     "InternalBufferActivatableAbility": "ce742c6b-7a93-442b-abbd-d455e3b92a0b",
     "InternalBufferBuff": "d7e73ad0-f07a-4471-863a-51cd0a4f8fac",
     "InternalBufferExtraUseFeature": "7453d8da-fb83-443f-9d2f-72b9b80a013c",
     "InternalBufferFeature": "01d9ff38-84fe-45e0-9fe2-ac373e3bdc1b",
     "InternalBufferResource": "4e77471d-cb87-4ea7-b662-3c483bf42de2",
-    "ElementalStrikesAcidBurstBuff": "db73ded7-381c-40fe-a2ba-5d5995f30345",
-    "ElementalStrikesColdBurstBuff": "c666499d-1fa9-45df-bf10-175b2b3de2c4",
-    "ElementalStrikesElectricityBurstBuff": "9821cbbd-dee1-464a-baa7-002c4786294e",
-    "ElementalStrikesFireBurstBuff": "e66ad7ba-fe84-43db-b9bc-f2f762c13bea",
-    "AzataBloodlineLevelUnitProperty": "c0739c77-5575-4459-8eff-a039f33b6474",
-    "AzataBloodlineRequisiteFeature": "1b0fbd71-d0d2-4402-a096-28124d776dc4",
-    "CrossbloodedAzataBloodline": "0d1872cb-64d3-4416-941c-6c86903dab44",
-    "InspireCourageScalingUnitProperty": "d99e3062-363d-42f4-8693-5f6616088592",
     "SeekerAzataBloodline": "47128470-07b5-4fb2-a809-51fa656d5040",
     "SorcererAzataBloodline": "5a8af924-381d-4fec-a781-503d46161ad9",
     "SorcererAzataBloodlineArcana": "92f82571-0298-46aa-b144-433ea3d8110d",
@@ -40,7 +41,7 @@
     "SorcererAzataSpell6Feature": "06c8af2b-197a-4e77-b3da-a67822d3ccda",
     "SorcererAzataSpell7Feature": "9f53c588-ec6c-4cb2-908b-009b4737d897",
     "SorcererAzataSpell8Feature": "c6301461-85e4-491a-a767-da5782a9d227",
-    "SorcererAzataSpell9Feature": "73951769-ffc6-47ca-9254-94d1e0e1891b"
+    "SorcererAzataSpell9Feature": "73951769-ffc6-47ca-9254-94d1e0e1891b",
   },
   "DerivedBlueprintMasters": {
 

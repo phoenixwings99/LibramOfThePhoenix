@@ -27,7 +27,11 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
 
             if (Settings.IsDisabled("BloodHavoc"))
                 return;
-            FeatureConfigurator.For("BloodHavocFeature").AddComponent<BloodHavocComponent>().Configure();
+            FeatureConfigurator.For("BloodHavocFeature").AddComponent<BloodHavocComponent>(x =>
+            {
+                x.classes = new List<BlueprintCharacterClassReference>() { BlueprintTool.GetRef<BlueprintCharacterClassReference>("SorcererClass"), BlueprintTool.GetRef<BlueprintCharacterClassReference>("BloodragerClass") };
+                x.archetypeBooks = new List<BlueprintSpellbookReference>() { BlueprintTool.GetRef<BlueprintSpellbookReference>("e2763fbfdb91920458c4686c3e7ed085") };
+            }).Configure();
 
 
 
@@ -105,7 +109,8 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
             //AbstractBloodlineMutationComponent.LoadBadScalingAttackPowers(ShittyAttackSpellLikeBloodlinePowers);
 
             AddToSelectors(BlueprintTool.GetRef<BlueprintFeatureReference>("BloodHavocFeature"));
-
+            ProgressionConfigurator.For("SorcererAzataBloodline").AddToLevelEntries(2, "BloodHavocFeature").Configure();
+            
         }
 
         public static void AddToSelectors(Blueprint<BlueprintFeatureReference> blueprint)

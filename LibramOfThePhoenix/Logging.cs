@@ -7,6 +7,8 @@ using static UnityModManagerNet.UnityModManager.ModEntry;
 
 namespace LibramOfThePhoenix
 {
+
+
     internal class Logging
     {
         private static readonly Dictionary<string, Logger> Loggers = new();

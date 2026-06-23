@@ -33,6 +33,7 @@ namespace LibramOfThePhoenix
 
             BlueprintTool.AddGuidsByName(("SorcererClass", "b3a505fb61437dc4097f43c3f8f9a4cf"));
             BlueprintTool.AddGuidsByName(("MagusClass", "45a4607686d96a1498891b3286121780"));
+            BlueprintTool.AddGuidsByName(("BloodragerClass", "d77e67a814d686842802c9cfd8ef8499"));
             BlueprintTool.AddGuidsByName(("EldritchScionArchetype", "d078b2ef073f2814c9e338a789d97b73"));
             
         }

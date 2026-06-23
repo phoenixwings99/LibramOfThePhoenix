@@ -9,5 +9,5 @@
   "EntryMethod": "LibramOfThePhoenix.Main.Load",
   "HomePage": "",
   "Repository": "",
-  "LoadAfter": ["TableTopTweaks-Base"]
+  "LoadAfter": [ "TabletopTweaks-Base", "TabletopTweaks-Core" ]
 }

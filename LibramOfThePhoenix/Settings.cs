@@ -40,6 +40,7 @@ namespace LibramOfThePhoenix
             settings.AddToggle(MakeToggle("HexcrafterArcanaSelection", true,true));
             settings.AddToggle(MakeToggle("ArcaneRiderFeatSelection", true,true));
             settings.AddToggle(MakeToggle("AzataSorcererBloodline", true,true));
+            settings.AddToggle(MakeToggle("BloodHavoc", true,false));
 
 
             Menu.AddSettings(settings);
