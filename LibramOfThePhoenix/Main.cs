@@ -2,7 +2,10 @@
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.PubSubSystem;
+using LibramOfThePhoenix.Modified_Content.Archetypes;
 using LibramOfThePhoenix.New_Content.Bloodlines;
+using LibramOfThePhoenix.New_Content.ClassFeatures;
+using LibramOfThePhoenix.New_Content.Spells;
 using System.Reflection;
 using System.Text;
 using TabletopTweaks.Core.NewEvents;
@@ -87,6 +90,20 @@ public static class Main
         return TTCInstalled ??= UnityModManager.modEntries.Exists(x => x.Info.Id.Equals("TabletopTweaks-Core"));
     }
 
+    internal static bool IsCharOpsPlusEnabled()
+    {
+        return UnityModManager.modEntries.Where(
+            mod => mod.Info.Id.Equals("CharacterOptionsPlus") && mod.Enabled && !mod.ErrorOnLoading)
+          .Any();
+    }
+
+    internal static bool IsExpandedContentEnabled()
+    {
+        return UnityModManager.modEntries.Where(
+            mod => mod.Info.Id.Equals("ExpandedContent") && mod.Enabled && !mod.ErrorOnLoading)
+          .Any();
+    }
+
     public static void OnGUI(UnityModManager.ModEntry modEntry)
     {
 
@@ -113,7 +130,8 @@ public static class Main
                   "LibramOfThePhoenix.Localization.Settings.json",
                   "LibramOfThePhoenix.Localization.Bloodlines.json",
                   "LibramOfThePhoenix.Localization.Kinetics.json",
-                  "LibramOfThePhoenix.Localization.Modifications.json"
+                  "LibramOfThePhoenix.Localization.Modifications.json",
+                  "LibramOfThePhoenix.Localization.Spells.json"
                   );
                 Logger.Log("Patching blueprints.");
                 Settings.Init();
@@ -125,6 +143,9 @@ public static class Main
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRider();
                 AzataBloodline.Make();
                 BloodHavoc.Setup();
+                BurstOfRadiance.Make();
+                WitchPatrons.Make();
+                StigmatizedWitch.ReturnAccursedPatrons();
                 // Insert your mod's patching methods here
                 // Example
                 // SuperAwesomeFeat.Configure()

@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Localization;
+using Kingmaker.UI.SettingsUI;
 using ModMenu.Settings;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,11 @@ namespace LibramOfThePhoenix
             return Menu.GetSettingValue<bool>(GetKey(key.ToLower()));
         }
 
+        internal static T GetDD<T>(string key) where T : Enum
+        {
+            return Menu.GetSettingValue<T>(GetKey(key));
+        }
+
         internal static bool IsDisabled(string key)
         {
             return !Menu.GetSettingValue<bool>(GetKey(key.ToLower()));
@@ -33,15 +39,44 @@ namespace LibramOfThePhoenix
             SettingsBuilder settings =
               SettingsBuilder.New(RootKey, GetString("Title"))
                 .AddDefaultButton(OnDefaultsApplied);
+            //settings.AddSubHeader(GetString("Archetypes.Title"), startExpanded: true);
+            settings.AddSubHeader(GetString("Bugfixes.Title"), true);
+            settings.AddToggle(MakeToggle("FixWitchSpellIcons", true, true));
+            settings.AddSubHeader(GetString("RestoreMissingFeatures.Title"), true);
+            settings.AddToggle(MakeToggle("InternalBuffer", true, true));
 
+            settings.AddSubHeader(GetString("ModifyArchetypes.Title"), true);
             settings.AddToggle(MakeToggle("CleanupEldritchScion", true,true));
-            settings.AddToggle(MakeToggle("BuffElementalStrikes", true,true));
-            settings.AddToggle(MakeToggle("InternalBuffer", true,true));
-            settings.AddToggle(MakeToggle("HexcrafterArcanaSelection", true,true));
-            settings.AddToggle(MakeToggle("ArcaneRiderFeatSelection", true,true));
-            settings.AddToggle(MakeToggle("AzataSorcererBloodline", true,true));
-            settings.AddToggle(MakeToggle("BloodHavoc", true,false));
+            settings.AddToggle(MakeToggle("HexcrafterArcanaSelection", true, true));
+            settings.AddToggle(MakeToggle("ArcaneRiderFeatSelection", true, true));
+            settings.AddToggle(MakeToggle("WitchRestoreStigmatizedPatron", true, true));
 
+            settings.AddSubHeader(GetString("ModifyBloodlines.Title"), true);
+            settings.AddToggle(MakeToggle("BuffElementalStrikes", true,true));
+            settings.AddSubHeader(GetString("NewBloodlines.Title"), true);
+            settings.AddToggle(MakeToggle("AzataSorcererBloodline", true, true));
+            settings.AddSubHeader(GetString("NewFeatures.Title"), true);
+            settings.AddToggle(MakeToggle("BloodHavoc", true,false));
+            settings.AddSubHeader(GetString("NewPatrons.Title"), true);
+            settings.AddToggle(MakeToggle("WitchPatronAnimal", true, true));
+            settings.AddToggle(MakeToggle("WitchPatronDeath", true, true ));
+            settings.AddToggle(MakeToggle("WitchPatronDeathL2replace", true, true));
+            settings.AddToggle(MakeToggle("WitchPatronLight", true,true).IsModificationAllowed(() => Settings.GetDD<EmberPatron>("WitchEmberPatron") != EmberPatron.Light));
+            settings.AddToggle(MakeToggle("WitchPatronPlague", true, true));
+            settings.AddToggle(MakeToggle("PlaguePerniciousPoison", false, false));
+            settings.AddToggle(MakeToggle("WitchPatronProtection", true, true));
+            settings.AddSubHeader(GetString("NewSpells.Title"), true);
+            settings.AddToggle(MakeToggle("BurstOfRadiance", true,true));
+
+            settings.AddToggle(MakeToggle("WinterWitchPatronProgression", true, true));
+
+            settings.AddSubHeader(GetString("ModifyCharacters.Title"), true);
+            settings.AddDropdown<EmberPatron>(MakeDropdown<EmberPatron>("WitchEmberPatron", EmberPatron.Endurance, UnityEngine.ScriptableObject.CreateInstance<EmberUnityEnumEnum>()).OnValueChanged(x => {
+
+                if (x == EmberPatron.Light)
+                    ModMenu.ModMenu.SetSetting(GetKey("WitchPatronLight"), true);
+                
+            }));
 
             Menu.AddSettings(settings);
         }
@@ -61,8 +96,10 @@ namespace LibramOfThePhoenix
 
         private static string GetKey(string partialKey)
         {
-            return $"{RootKey}.{partialKey}";
+            return $"{RootKey}.{partialKey}".ToLower();
         }
+
+
 
         private static Toggle MakeToggle(string keyStub, bool defaultVal, bool hasDesc)
         {
@@ -73,5 +110,27 @@ namespace LibramOfThePhoenix
 
             return toggle;
         }
+
+        private static Dropdown<T> MakeDropdown<T>(string keyStub, T defaultVal, UISettingsEntityDropdownEnum<T> dd, bool desc = false) where T : Enum
+        {
+
+            var dropper = Dropdown<T>.New(GetKey(keyStub), defaultVal, LocalizationTool.GetString($"{RootStringKey}.{keyStub}"), dd);
+            if (desc)
+                dropper.WithLongDescription(LocalizationTool.GetString($"{RootStringKey}.{keyStub}.Desc"));
+            return dropper;
+
+        }
+
+        public enum EmberPatron
+        {
+            Elements,
+            Healing,
+            Endurance,
+            Light
+        }
+        // Declare a non-generic class which inherits from the generic type
+        private class EmberUnityEnumEnum : UISettingsEntityDropdownEnum<EmberPatron>
+        { }
+
     }
 }

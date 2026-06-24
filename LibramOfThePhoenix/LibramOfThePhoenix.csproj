@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>LibramOfThePhoenix</AssemblyName>
 		<Description>Libram Of The Phoenix</Description>
-		<Version>1.0.0</Version>
+		<Version>1.1.0</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>LibramOfThePhoenix</RootNamespace>
@@ -71,6 +71,7 @@
     <EmbeddedResource Include="Localization\Kinetics.json" />
     <EmbeddedResource Include="Localization\Modifications.json" />
     <EmbeddedResource Include="Localization\Settings.json" />
+    <EmbeddedResource Include="Localization\Spells.json" />
     <EmbeddedResource Include="Config\Blueprints.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   

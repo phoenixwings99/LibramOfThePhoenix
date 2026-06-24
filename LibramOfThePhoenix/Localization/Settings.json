@@ -4,6 +4,48 @@
     "ProcessTemplates": false,
     "enGB": "Libram Of The Phoenix"
   },
+  {
+    "Key": "LOTP.Settings.Bugfixes.Title",
+    "enGB": "Bugfixes"
+  },
+  {
+    "Key": "LOTP.Settings.Archetypes.Title",
+    "enGB": "Archetypes"
+  },
+  {
+    "Key": "LOTP.Settings.ModifyArchetypes.Title",
+    "enGB": "Modify Archetypes"
+  },
+  {
+    "Key": "LOTP.Settings.RestoreMissingFeatures.Title",
+    "enGB": "RestoreMissingFeatures"
+  },
+  {
+    "Key": "LOTP.Settings.ModifyBloodlines.Title",
+    "enGB": "Modify Bloodlines"
+  },
+  {
+    "Key": "LOTP.Settings.NewBloodlines.Title",
+    "enGB": "New Bloodlines"
+  },
+  {
+    "Key": "LOTP.Settings.NewFeatures.Title",
+    "enGB": "New Features"
+  },
+  {
+    "Key": "LOTP.Settings.NewPatrons.Title",
+    "enGB": "New Patrons"
+  },
+  {
+    "Key": "LOTP.Settings.ModifyCharacters.Title",
+    "enGB": "Modify Characters"
+  },
+  {
+    "Key": "LOTP.Settings.NewSpells.Title",
+    "enGB": "New Spells"
+  },
+
+
 
   {
     "Key": "LOTP.Settings.VerboseLogging",
@@ -66,5 +108,97 @@
   {
     "Key": "LOTP.Settings.BloodHavoc",
     "enGB": "Blood Havoc"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronAnimal",
+    "enGB": "Witch Patron: Animal"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronAnimal.Desc",
+    "enGB": "Adds the Animal witch patron. Some deviation from tabletop to deal with unimplementable (speak with/charm animals) and unimplemented (antilife shell) spells."
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronDeath",
+    "enGB": "Witch Patron: Death"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronDeath.Desc",
+    "enGB": "Adds the Death witch patron, focusing on necromantic attack spells. Some deviation from tabletop to account for unimplmentable (speak with dead, rest eternal), unimplemented (suffocate, symbol of death) and just plain bad (power word kill) TT spells. \n  Expanded Content to be installed for Gloomblind Bolts."
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronDeathL2replace",
+    "enGB": "Death Patron: Replace Blessing Of Courage And Life"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronDeathL2replace.Desc",
+    "enGB": "Replaces TT Death level 2 : Blessing Of Courage and Life with Boneshaker to go all in on necromantic attack."
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronPlague",
+    "enGB": "Witch Patron: Plague"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronPlague.Desc",
+    "enGB": "Adds the Plague witch patron, focusing on different necromantic nastiness. Some deviation from tabletop to account for unimplemented (detect undead, control undead, create greater undead), and just plain bad (giant vermin) TT spells. Kicks Create Undead up a level to slot in Plague Storm"
+  },
+  {
+    "Key": "LOTP.Settings.PlaguePerniciousPoison",
+    "enGB": "Plague Patron: Replace Command Undead with Pernicious Poison"
+  },
+  {
+    "Key": "LOTP.Settings.PlaguePerniciousPoison.Desc",
+    "enGB": "Follow Call Of The Wild's lead and swap Command Undead for Pernicious Poison on the Plague patron"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronProtection",
+    "enGB": "Witch Patron: Protection"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronProtection.Desc",
+    "enGB": "Adds the Protection witch patron, focusing on defense spells. Some deviation from tabletop to account for most of the list being unimplemented, using CoTW list instead."
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronLight",
+    "enGB": "Witch Patron: Light"
+  },
+  {
+    "Key": "LOTP.Settings.WitchPatronLight.Desc",
+    "enGB": "Adds the Light witch patron, focusing on light-themed crowd control and damage spells. Some deviation from tabletop to account for lack of detailed lighting system in game making dancing lantern, continual flame, and daylight unimplementable. Also swapped out Sirocco for Chains Of Light because seriously?"
+  },
+  {
+    "Key": "LOTP.Settings.WitchEmberPatron",
+    "enGB": "Stigmatized Witch: Select Ember's Patron"
+  },
+  {
+    "Key": "LOTP.Settings.WitchRestoreStigmatizedPatron",
+    "enGB": "Stigmatized Witch: Restore Patron"
+  },
+  {
+    "Key": "LOTP.Settings.WitchRestoreStigmatizedPatron.Desc",
+    "enGB": "Moves stigmatized somewhat out of the suck by cancelling the patron removal. By default, this will give Ember the Endurance Patron when first met"
+  },
+  {
+    "Key": "LOTP.Settings.WinterWitchPatronProgression",
+    "enGB": "Winter Witch Progresses Patron"
+  },
+  {
+    "Key": "LOTP.Settings.WinterWitchPatronProgression.Desc",
+    "enGB": "If you have two witch patrons ex from TTT-Base Second patron, Winter Witch will progress both."
+  },
+  {
+    "Key": "LOTP.Settings.FixWitchSpellIcons",
+    "enGB": "Witch: Fix Patron Spell Icons"
+  },
+  {
+    "Key": "LOTP.Settings.FixWitchSpellIcons.Desc",
+    "enGB": "Gives Witch Spell features the icon of the spell."
+  },
+  {
+    "Key": "LOTP.Settings.BurstOfRadiance",
+    "enGB": "Burst Of Radiance"
+  },
+  {
+    "Key": "LOTP.Settings.BurstOfRadiance.Desc",
+    "enGB": "Level 2 spell for many classes, targets area, blinds on failed save, dazzles on success, deals small damage to evil."
   }
 ]

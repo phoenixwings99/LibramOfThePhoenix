@@ -109,14 +109,14 @@ namespace LibramOfThePhoenix.New_Content.Bloodlines
             //AbstractBloodlineMutationComponent.LoadBadScalingAttackPowers(ShittyAttackSpellLikeBloodlinePowers);
 
             AddToSelectors(BlueprintTool.GetRef<BlueprintFeatureReference>("BloodHavocFeature"));
-            ProgressionConfigurator.For("SorcererAzataBloodline").AddToLevelEntries(2, "BloodHavocFeature").Configure();
+            
             
         }
 
         public static void AddToSelectors(Blueprint<BlueprintFeatureReference> blueprint)
         {
 
-
+            
 
             FeatureSelectionConfigurator.For("3a60f0c0442acfb419b0c03b584e1394").AddToAllFeatures(blueprint).Configure();
             var bloodrager = BlueprintTool.Get<BlueprintFeatureSelection>("62b33ac8ceb18dd47ad4c8f06849bc01").AllFeatures.Where(x => x is BlueprintProgression).Select(x => x as BlueprintProgression);
