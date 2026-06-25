@@ -82,7 +82,17 @@
     "WitchProtectionPatronSpellLevel6": "4a732e96-ac5f-4c0f-a299-eb9238952ed6",
     "WitchProtectionPatronSpellLevel7": "c7383468-3c60-4994-ba59-55e348b00d8c",
     "WitchProtectionPatronSpellLevel8": "eb1b5787-ddfd-4c4a-8539-58e08218d112",
-    "WitchProtectionPatronSpellLevel9": "b9685c67-6d2a-428c-b99d-9a09106ba249"
+    "WitchProtectionPatronSpellLevel9": "b9685c67-6d2a-428c-b99d-9a09106ba249",
+    "WitchDeathPatronProgression": "160b66fe-0da5-48b5-8506-36296266d5b2",
+    "WitchDeathPatronSpellLevel1": "ab9e870b-d475-463e-8908-2949bfd478bc",
+    "WitchDeathPatronSpellLevel2": "2750bbde-5814-4aab-a2fa-bc964578fd7c",
+    "WitchDeathPatronSpellLevel3": "5fb35d74-2cd1-4ee3-b7e7-7f9c7cf30b54",
+    "WitchDeathPatronSpellLevel4": "e8a12410-70b7-4ff4-920a-04e80e622489",
+    "WitchDeathPatronSpellLevel5": "b496deff-951a-4470-9052-792e9485a6db",
+    "WitchDeathPatronSpellLevel6": "fd48e6d8-c91b-46dc-903a-6d217ca743bc",
+    "WitchDeathPatronSpellLevel7": "e0782a22-b4cf-442e-9e2a-ff3fd01ed378",
+    "WitchDeathPatronSpellLevel8": "f3a0c71b-b417-4fe0-a077-64cae4b60665",
+    "WitchDeathPatronSpellLevel9": "fc034171-61bc-47d1-8cee-d83c41d6c699"
   },
   "DerivedBlueprintMasters": {
 

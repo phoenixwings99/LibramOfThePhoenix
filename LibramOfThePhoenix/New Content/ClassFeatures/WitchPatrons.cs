@@ -193,7 +193,7 @@ namespace LibramOfThePhoenix.New_Content.ClassFeatures
                 spells.Add("e96424f70ff884947b06f41a765b7658");//Sunburst
                 spells.Add("08ccad78cac525040919d51963f9ac39");
                 // [PFS Legal] Light (Ultimate Magic pg. 83): 2nd — dancing lantern, 4th — continual flame, 6th — daylight, 8th — rainbow pattern, 10th — fire snake, 12th — sirocco, 14th — sunbeam, 16th — sunburst, 18th — fiery body.
-
+               
                 patronDefines.Add(new("Light", spells, () => { return Settings.IsEnabled("BurstOfRadiance"); }));
 
 
