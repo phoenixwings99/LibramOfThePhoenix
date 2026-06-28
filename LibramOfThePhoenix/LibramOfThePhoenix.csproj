@@ -68,6 +68,7 @@
 	</ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\Bloodlines.json" />
+    <EmbeddedResource Include="Localization\Feats.json" />
     <EmbeddedResource Include="Localization\Kinetics.json" />
     <EmbeddedResource Include="Localization\Modifications.json" />
     <EmbeddedResource Include="Localization\Settings.json" />
@@ -76,6 +77,8 @@
   </ItemGroup>
   
   <ItemGroup>
+    
+
     <Reference Include="ModMenu">
       <HintPath>$(WrathInstallDir)\Mods\ModMenu\ModMenu.dll</HintPath>
     </Reference>

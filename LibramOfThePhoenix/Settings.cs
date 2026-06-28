@@ -42,6 +42,7 @@ namespace LibramOfThePhoenix
             //settings.AddSubHeader(GetString("Archetypes.Title"), startExpanded: true);
             settings.AddSubHeader(GetString("Bugfixes.Title"), true);
             settings.AddToggle(MakeToggle("FixWitchSpellIcons", true, true));
+
             settings.AddSubHeader(GetString("RestoreMissingFeatures.Title"), true);
             settings.AddToggle(MakeToggle("InternalBuffer", true, true));
 
@@ -53,10 +54,20 @@ namespace LibramOfThePhoenix
 
             settings.AddSubHeader(GetString("ModifyBloodlines.Title"), true);
             settings.AddToggle(MakeToggle("BuffElementalStrikes", true,true));
+
+            settings.AddToggle(MakeToggle("CombineSorcererDragonClaws", true, true));
+            settings.AddToggle(MakeToggle("UnlimitedSorcererBloodlineClaws", true, true));
+
+
             settings.AddSubHeader(GetString("NewBloodlines.Title"), true);
             settings.AddToggle(MakeToggle("AzataSorcererBloodline", true, true));
+
+
             settings.AddSubHeader(GetString("NewFeatures.Title"), true);
             settings.AddToggle(MakeToggle("BloodHavoc", true,false));
+            settings.AddSubHeader(GetString("NewFeats.Title"), true);
+            settings.AddToggle(MakeToggle("ArmorOfThePit", true, true));
+
             settings.AddSubHeader(GetString("NewPatrons.Title"), true);
             settings.AddToggle(MakeToggle("WitchPatronAnimal", true, true));
             settings.AddToggle(MakeToggle("WitchPatronDeath", true, true ));
@@ -65,8 +76,12 @@ namespace LibramOfThePhoenix
             settings.AddToggle(MakeToggle("WitchPatronPlague", true, true));
             settings.AddToggle(MakeToggle("PlaguePerniciousPoison", false, false));
             settings.AddToggle(MakeToggle("WitchPatronProtection", true, true));
+
+
             settings.AddSubHeader(GetString("NewSpells.Title"), true);
             settings.AddToggle(MakeToggle("BurstOfRadiance", true,true));
+            settings.AddToggle(MakeToggle("GreaterShockingGrasp", true,true));
+            settings.AddToggle(MakeToggle("StormingGraspLine", true,true));
 
             settings.AddToggle(MakeToggle("WinterWitchPatronProgression", true, true));
 

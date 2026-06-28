@@ -3,6 +3,7 @@ using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.PubSubSystem;
 using LibramOfThePhoenix.Modified_Content.Archetypes;
+using LibramOfThePhoenix.Modified_Content.Bloodlines;
 using LibramOfThePhoenix.New_Content.Bloodlines;
 using LibramOfThePhoenix.New_Content.ClassFeatures;
 using LibramOfThePhoenix.New_Content.Spells;
@@ -66,6 +67,7 @@ public static class Main
                 InitializeDelayed = true;
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafterLast();
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRiderLate();
+                New_Content.Feats.ArmorOfThePit.DoInterop();
 
             }
             catch (Exception e)
@@ -104,6 +106,13 @@ public static class Main
           .Any();
     }
 
+    internal static bool IsAlternateRacialTraitsEnabled()
+    {
+        return UnityModManager.modEntries.Where(
+            mod => mod.Info.Id.Equals("AlternateRacialTraits") && mod.Enabled && !mod.ErrorOnLoading)
+          .Any();
+    }
+
     public static void OnGUI(UnityModManager.ModEntry modEntry)
     {
 
@@ -128,6 +137,7 @@ public static class Main
                 Initialized = true;
                 LocalizationTool.LoadEmbeddedLocalizationPacks(
                   "LibramOfThePhoenix.Localization.Settings.json",
+                  "LibramOfThePhoenix.Localization.Feats.json",
                   "LibramOfThePhoenix.Localization.Bloodlines.json",
                   "LibramOfThePhoenix.Localization.Kinetics.json",
                   "LibramOfThePhoenix.Localization.Modifications.json",
@@ -142,10 +152,14 @@ public static class Main
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafter();
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpArcaneRider();
                 AzataBloodline.Make();
+                BetterAbyssalClaws.GiveInfiniteUses();
+                BetterDragonClaws.SorcererClawsOverhaul();
                 BloodHavoc.Setup();
                 BurstOfRadiance.Make();
+                Electrical_Touch_Spells.Make();
                 WitchPatrons.Make();
                 StigmatizedWitch.ReturnAccursedPatrons();
+                New_Content.Feats.ArmorOfThePit.Make();
                 // Insert your mod's patching methods here
                 // Example
                 // SuperAwesomeFeat.Configure()

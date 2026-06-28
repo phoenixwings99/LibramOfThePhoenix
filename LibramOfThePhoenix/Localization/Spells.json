@@ -54,5 +54,37 @@
   {
     "Key": "WitchWaterPatronProgression",
     "enGB": "Water"
+  },
+  {
+    "Key": "GreaterShockingGrasp",
+    "enGB": "Greater Shocking Grasp"
+  },
+  {
+    "Key": "GreaterShockingGrasp.Desc",
+    "enGB": "This spell functions as shocking grasp except it deals 1d6 points of electricity damage per caster level (maximum 10d6). The target must also make a Fortitude save or be stunned for 1d4 rounds."
+  },
+  {
+    "Key": "StormingGrasp",
+    "enGB": "Storming Grasp"
+  },
+  {
+    "Key": "StormingGrasp.Desc",
+    "enGB": "TThis spell functions as shocking grasp except you can make one touch per caster level within the duration. ."
+  },
+  {
+    "Key": "LesserStormingGrasp",
+    "enGB": "Storming Grasp, Lesser"
+  },
+  {
+    "Key": "LesserStormingGrasp.Desc",
+    "enGB": "Your successful melee touch attack deals 1d6 + 1 per caster level (max 5) points of electical damage. You can use this melee touch attack up to one time per level."
+  },
+  {
+    "Key": "GreaterStormingGrasp",
+    "enGB": "Storming Grasp, Greater"
+  },
+  {
+    "Key": "GreaterStormingGrasp.Desc",
+    "enGB": "This spell functions as shocking grasp, greater except you can make one touch per caster level within the duration. "
   }
 ]

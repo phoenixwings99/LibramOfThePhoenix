@@ -21,9 +21,19 @@ Added Azata bloodline for Sorcerer and Eldritch Scion - see https://metzo.mirahe
 Witch Patrons: Animal, Death, Light, Plague Protection - more to come as spells they need are implemented
 Burst Of Radiance spell.
 Blood Havoc Sorcerer/Eldritch Scion/Bloodrager Bloodline Mutation - deal extra damage with damaging spells. Only available via bonus feat selector for now, trading in bloodline powers is a doozy to implement.
+Armor Of The Pit - tiefling racial feat, +2 natural armor, if the character has the alternate racial trait scaled skin gives +1 natural armor and the missing resists instead
+Greater Shocking Grasp - 3rd level touch attack spell, 1d6/cl max 10 elec damage, fort save or be stunned for 1d4 rounds on hit
+Storming Grasp line - Shocking Grasp variants with increased spell level and 1 hit per caster level
 
 
 ## Changelog
+
+### 1.2.0 (in progress, unreleased)
+Unlimited sorcerer claw turns
+Convert sorcerer dragon claws into a single power
+Armor Of The Pit (Tiefling Racial Feat)
+New Electrical Spells
+
 
 ### 1.1.0
 

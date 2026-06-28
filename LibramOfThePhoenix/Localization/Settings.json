@@ -37,13 +37,18 @@
     "enGB": "New Patrons"
   },
   {
-    "Key": "LOTP.Settings.ModifyCharacters.Title",
-    "enGB": "Modify Characters"
+    "Key": "LOTP.Settings.NewFeats.Title",
+    "enGB": "New Feats"
   },
   {
     "Key": "LOTP.Settings.NewSpells.Title",
     "enGB": "New Spells"
   },
+  {
+    "Key": "LOTP.Settings.ModifyCharacters.Title",
+    "enGB": "Modify Characters"
+  },
+
 
 
 
@@ -200,5 +205,46 @@
   {
     "Key": "LOTP.Settings.BurstOfRadiance.Desc",
     "enGB": "Level 2 spell for many classes, targets area, blinds on failed save, dazzles on success, deals small damage to evil."
+  },
+  {
+    "Key": "LOTP.Settings.CombineSorcererDragonClaws",
+    "enGB": "Combine Sorcerer Dragon Claws"
+  },
+  {
+    "Key": "LOTP.Settings.CombineSorcererDragonClaws.Desc",
+    "enGB": "Combine all sorcerer dragon bloodline claw powers into the same ability, stacking elemental damage from each bloodline."
+  },
+  {
+    "Key": "LOTP.Settings.UnlimitedSorcererBloodlineClaws",
+    "enGB": "Unlimited Sorcerer Bloodline Claws"
+  },
+  {
+    "Key": "LOTP.Settings.UnlimitedSorcererBloodlineClaws.Desc",
+    "enGB": "Abyssal and Draconic sorcerer bloodline power claws no longer have a use limit."
+  },
+  {
+    "Key": "LOTP.Settings.ArmorOfThePit",
+    "enGB": "Armor Of The Pit"
+  },
+  {
+    "Key": "LOTP.Settings.ArmorOfThePit.Desc",
+    "enGB": "Tiefling Racial Feat: +2 natural armor. +1 and the other two resists with the Scaled Skin racial trait."
+  },
+  {
+    "Key": "LOTP.Settings.GreaterShockingGrasp",
+    "enGB": "Greater Shocking Grasp"
+  },
+  {
+    "Key": "LOTP.Settings.GreaterShockingGrasp.Desc",
+    "enGB": "Adds Greater Shocking Grasp, a level 3 touch spell dealing 1d6/level (max 10d6) and forcing a save or be stunned."
+  },
+  {
+    "Key": "LOTP.Settings.StormingGraspLine",
+    "enGB": "Storming Grasp Spell Line"
+  },
+  {
+    "Key": "LOTP.Settings.StormingGraspLine.Desc",
+    "enGB": "Adds the Storming Grasp line of spells, a series of Shocking Grasp line varients with a higher spell level and a touch attack per level. Greater Storming Grasp requires that Greater Shocking Grasp is enabled."
   }
+
 ]

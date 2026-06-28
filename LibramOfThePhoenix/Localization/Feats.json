@@ -1,0 +1,12 @@
+[
+  {
+    "Key": "ArmorOfThePit",
+    "ProcessTemplates": false,
+    "enGB": "Armor Of The Pit"
+  },
+
+  {
+    "Key": "ArmorOfThePit.Desc",
+    "enGB": "You gain a +2 natural armor bonus.\n Special: If you have the scaled skin racial trait, you instead gain +1 natural armor and resistance 5 to two of the following energy types that you don’t have resistance to already: cold, electricity, and fire"
+  }
+]

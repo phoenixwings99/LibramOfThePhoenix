@@ -1,13 +1,13 @@
 ﻿{
   "Id": "LibramOfThePhoenix",
   "DisplayName": "Libram Of The Phoenix",
-  "Author": "",
+  "Author": "pheonix89",
   "Version": "1.1.1",
   "ManagerVersion": "0.27.11",
   "Requirements": [ "ModMenu-2.0.0", "TabletopTweaks-Core" ],
   "AssemblyName": "LibramOfThePhoenix.dll",
   "EntryMethod": "LibramOfThePhoenix.Main.Load",
-  "HomePage": "",
+  "HomePage": "https://github.com/phoenixwings99/LibramOfThePhoenix",
   "Repository": "",
-  "LoadAfter": [ "TabletopTweaks-Base", "TabletopTweaks-Core", "CharacterOptionsPlus" ]
+  "LoadAfter": [ "TabletopTweaks-Base", "TabletopTweaks-Core", "CharacterOptionsPlus", "AlternateRacialTraits" ]
 }
