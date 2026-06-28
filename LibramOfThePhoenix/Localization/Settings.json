@@ -51,7 +51,6 @@
 
 
 
-
   {
     "Key": "LOTP.Settings.VerboseLogging",
     "ProcessTemplates": false,
@@ -245,6 +244,46 @@
   {
     "Key": "LOTP.Settings.StormingGraspLine.Desc",
     "enGB": "Adds the Storming Grasp line of spells, a series of Shocking Grasp line varients with a higher spell level and a touch attack per level. Greater Storming Grasp requires that Greater Shocking Grasp is enabled."
+  },
+  {
+    "Key": "LOTP.Settings.DispelsAreBuffSafe",
+    "enGB": "Dispels Are Buff Safe"
+  },
+  {
+    "Key": "LOTP.Settings.DispelsAreBuffSafe.Desc",
+    "enGB": "Dispel Magic, Greater Dispel Magic, Alchemist Dispelling Bombs and Slayer Dispelling Attacks should no longer dispel buffs on the casters allies or debuffs on enemies."
+  },
+  {
+    "Key": "LOTP.Settings.FixOrderOfTheStarCallingChannelingSupport",
+    "enGB": "Fix Order Of TheStar Calling Channeling Support"
+  },
+  {
+    "Key": "LOTP.Settings.FixOrderOfTheStarCallingChannelingSupport.Desc",
+    "enGB": "Order Of The Stars is supposed to grant half class level to Paladin and Cleric channeling progression. It didn't. Now it does."
+  },
+  {
+    "Key": "LOTP.Settings.FixExtraHitsSmallDragon",
+    "enGB": "Fix Extra Hits: Small Dragon"
+  },
+  {
+    "Key": "LOTP.Settings.FixExtraHitsSmallDragon.Desc",
+    "enGB": "The adorable little dragon from Dawn Of Dragons now gives his random extra damage as part of the attack, not as an extra hit."
+  },
+  {
+    "Key": "LOTP.Settings.FixRadianceFinalForm",
+    "enGB": "Radiance: Fix Final (Holy) Form"
+  },
+  {
+    "Key": "LOTP.Settings.FixRadianceFinalForm.Desc",
+    "enGB": "The good version of Radiance's final form now properly retains its holy effect"
+  },
+  {
+    "Key": "LOTP.Settings.FixFlameShield",
+    "enGB": "Flame Shield Wild Talent: Cold Protection"
+  },
+  {
+    "Key": "LOTP.Settings.FixFlameShield.Desc",
+    "enGB": "Flame Shield wild talent correctly halves incoming cold damage."
   }
 
 ]

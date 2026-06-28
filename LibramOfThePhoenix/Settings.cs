@@ -41,7 +41,13 @@ namespace LibramOfThePhoenix
                 .AddDefaultButton(OnDefaultsApplied);
             //settings.AddSubHeader(GetString("Archetypes.Title"), startExpanded: true);
             settings.AddSubHeader(GetString("Bugfixes.Title"), true);
+            settings.AddToggle(MakeToggle("DispelsAreBuffSafe", true, true));
             settings.AddToggle(MakeToggle("FixWitchSpellIcons", true, true));
+            settings.AddToggle(MakeToggle("FixOrderOfTheStarCallingChannelingSupport", true, true));
+            settings.AddToggle(MakeToggle("FixExtraHitsSmallDragon", true, true));
+            settings.AddToggle(MakeToggle("FixRadianceFinalForm", true, true));
+            settings.AddToggle(MakeToggle("FixFlameShield", true, true));
+
 
             settings.AddSubHeader(GetString("RestoreMissingFeatures.Title"), true);
             settings.AddToggle(MakeToggle("InternalBuffer", true, true));
@@ -86,7 +92,7 @@ namespace LibramOfThePhoenix
             settings.AddToggle(MakeToggle("WinterWitchPatronProgression", true, true));
 
             settings.AddSubHeader(GetString("ModifyCharacters.Title"), true);
-            settings.AddDropdown<EmberPatron>(MakeDropdown<EmberPatron>("WitchEmberPatron", EmberPatron.Endurance, UnityEngine.ScriptableObject.CreateInstance<EmberUnityEnumEnum>()).OnValueChanged(x => {
+            settings.AddDropdown(MakeDropdown("WitchEmberPatron", EmberPatron.Endurance, UnityEngine.ScriptableObject.CreateInstance<EmberUnityEnumEnum>()).OnValueChanged(x => {
 
                 if (x == EmberPatron.Light)
                     ModMenu.ModMenu.SetSetting(GetKey("WitchPatronLight"), true);

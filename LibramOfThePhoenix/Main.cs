@@ -146,7 +146,9 @@ public static class Main
                 Logger.Log("Patching blueprints.");
                 Settings.Init();
                 RefData.Load();
+                Bugfixes.Classes.Cavalier.FixOrderOfTheStarChannelAssistance();
                 Bugfixes.Classes.Magus.EScionSanityCheck();
+                Bugfixes.Classes.Witch.AllPatronFixes();
                 Modified_Content.Bloodlines.BuffedElementalStrikes.Do();
                 New_Content.Features.KineticistInternalBuffer.Make();
                 Modified_Content.Improved_MultiarchtypeAccess.MA_Magus.FreeUpHexcrafter();
@@ -160,6 +162,9 @@ public static class Main
                 WitchPatrons.Make();
                 StigmatizedWitch.ReturnAccursedPatrons();
                 New_Content.Feats.ArmorOfThePit.Make();
+                Bugfixes.Abilities.FlameShield.PatchFlameSheild();
+                Bugfixes.FixExtraHits.FixRandomWeaponsRiders();
+                Bugfixes.RadianceLevel2Fix.Fixes();
                 // Insert your mod's patching methods here
                 // Example
                 // SuperAwesomeFeat.Configure()

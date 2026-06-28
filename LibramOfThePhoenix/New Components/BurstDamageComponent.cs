@@ -24,7 +24,7 @@ namespace LibramOfThePhoenix.New_Components
                 {
                     return;
                 }
-                RuleCalculateWeaponStats ruleCalculateWeaponStats = Rulebook.Trigger<RuleCalculateWeaponStats>(new RuleCalculateWeaponStats(Owner, evt.AttackRoll.Weapon, null, null));
+                RuleCalculateWeaponStats ruleCalculateWeaponStats = Rulebook.Trigger(new RuleCalculateWeaponStats(Owner, evt.AttackRoll.Weapon, null, null));
                 DiceFormula dice = new DiceFormula(Math.Max(ruleCalculateWeaponStats.CriticalMultiplier - 1, 1), this.Dice);
                 evt.Add(new EnergyDamage(dice, this.Element));
             }
