@@ -1,6 +1,6 @@
 #Libram of the Phoenix
 ## A Content Mod
-This mod is a replacement for Tome Of The Firebird, which I have lost repo access to and cannon compile on fork anyway. It contains new content as the mood strikes me and will eventually contain everything from Tome of the Firebird that hasn't appeared in the DLC, or been implemented elsewhere.
+This mod is a replacement for Tome Of The Firebird, which I have lost repo access to and cannot compile on fork anyway. It contains new content as the mood strikes me and will eventually contain everything from Tome of the Firebird that hasn't appeared in the DLC, or been implemented elsewhere.
 
 ## Contents
 ### Bugfixes
@@ -29,6 +29,9 @@ Blood Havoc Sorcerer/Eldritch Scion/Bloodrager Bloodline Mutation - deal extra d
 Armor Of The Pit - tiefling racial feat, +2 natural armor, if the character has the alternate racial trait scaled skin gives +1 natural armor and the missing resists instead
 Greater Shocking Grasp - 3rd level touch attack spell, 1d6/cl max 10 elec damage, fort save or be stunned for 1d4 rounds on hit
 Storming Grasp line - Shocking Grasp variants with increased spell level and 1 hit per caster level
+
+### Known Issues
+Multi hit touch spells leave extra icon on the dash, do not always multi hit across multiple turns
 
 
 ## Changelog

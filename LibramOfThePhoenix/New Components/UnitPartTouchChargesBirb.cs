@@ -57,6 +57,7 @@ namespace LibramOfThePhoenix.New_Components
                 {
                     Logger.Verbose(() => "No charges remaining");
                     caster.Remove<UnitPartTouch>();
+                    
                 }
             }
 
@@ -68,15 +69,28 @@ namespace LibramOfThePhoenix.New_Components
                     UnitEntityData maybeCaster = context.MaybeCaster;
                     if (maybeCaster == null)
                     {
-                        return false;
-                    }
-                    UnitPartTouch unitPartTouch = maybeCaster.Get<UnitPartTouch>();
-                    if (unitPartTouch && unitPartTouch.Ability.Data == context.Ability && context.Ability.Blueprint.GetComponent<TouchChargesBirb>() is not not null)
-                    {
-                        ConsumeCharge(maybeCaster);
                         return true;
                     }
-                    else return false;
+                    UnitPartTouch unitPartTouch = maybeCaster.Get<UnitPartTouch>();
+                    if (unitPartTouch && unitPartTouch.Ability.Data == context.Ability && context.Ability.Blueprint.GetComponent<TouchChargesBirb>() is not null && maybeCaster.Get<UnitPartTouchChargesBirb>() is not null)
+                    {
+#if DEBUG
+                        Logger.Log($"Before ConsumeCharge called on: {context.Ability.Name} there are {maybeCaster.Get<UnitPartTouchChargesBirb>().Charges} remaining");
+#endif
+                        ConsumeCharge(maybeCaster);
+
+#if DEBUG
+                        if (maybeCaster.Get<UnitPartTouchChargesBirb>())
+                            Logger.Log($"After ConsumeCharge called on: {context.Ability.Name} there are {maybeCaster.Get<UnitPartTouchChargesBirb>().Charges} remaining");
+                        else
+                        {
+                            Logger.Log($"After ConsumeCharge called on: {context.Ability.Name} UnitPartTouchChargesBirb is removed, {(maybeCaster.Get<UnitPartTouch>() is null ? "UnitPartTouch is removed" : "UnitPartTouch is not removed")}");
+                        }
+#endif
+
+                        return false;
+                    }
+                    else return true;
                     
                 }
                 catch (Exception e)

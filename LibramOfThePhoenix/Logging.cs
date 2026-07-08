@@ -13,7 +13,7 @@ namespace LibramOfThePhoenix
     {
         private static readonly Dictionary<string, Logger> Loggers = new();
         private static bool VerboseLogging = false;
-        private static string BaseChannel = "LotP";
+        private static string BaseChannel = "LibramOfThePhoenix";
 
         internal static Logger GetLogger(string channel)
         {

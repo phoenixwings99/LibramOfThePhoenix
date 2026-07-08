@@ -2,7 +2,7 @@
   "Id": "LibramOfThePhoenix",
   "DisplayName": "Libram Of The Phoenix",
   "Author": "pheonix89",
-  "Version": "1.1.1",
+  "Version": "1.2.0",
   "ManagerVersion": "0.27.11",
   "Requirements": [ "ModMenu-2.0.0", "TabletopTweaks-Core" ],
   "AssemblyName": "LibramOfThePhoenix.dll",
