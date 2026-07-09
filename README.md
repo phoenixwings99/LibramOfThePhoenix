@@ -1,23 +1,23 @@
-#Libram of the Phoenix
+#Libram of the Phoenix 
 ## A Content Mod
-This mod is a replacement for Tome Of The Firebird, which I have lost repo access to and cannot compile on fork anyway. It contains new content as the mood strikes me and will eventually contain everything from Tome of the Firebird that hasn't appeared in the DLC, or been implemented elsewhere.
+This mod is a replacement for Tome Of The Firebird, which I have lost repo access to and cannot compile on fork anyway. It contains new content as the mood strikes me and will eventually contain everything from Tome of the Firebird that hasn't appeared in the DLC, or been implemented elsewhere.  
 
 ## Contents
 ### Bugfixes
-Removed redundant add/remove of Arcane Weapon on Eldritch Scion.
-Witch Patron Spell features have proper icons
-Radiance +6 (uncorrupted) now gets Holy like it should
-Made Order Of The Stars's Calling Channeling support ability work. 
-Changes from Tabletop: Works on anything with a Channel Positive / Channel Negative keyword set, which means it will work on Warpriest and Oracle and Necromancer channels. No idea if it works on Warpriest fervor used normally.
-Fixed extra hits from the Dawn Of Dragons Chibi
+Removed redundant add/remove of Arcane Weapon on Eldritch Scion.  
+Witch Patron Spell features have proper icons  
+Radiance +6 (uncorrupted) now gets Holy like it should  
+Made Order Of The Stars's Calling Channeling support ability work.   
+Changes from Tabletop: Works on anything with a Channel Positive / Channel Negative keyword set, which means it will work on Warpriest and Oracle and Necromancer channels. No idea if it works on Warpriest fervor used normally.  
+Fixed extra hits from the Dawn Of Dragons Chibi  
 
 ### Modifications
-Implemented additional bonus feat options for Arcane Rider as part of the standard Magus bonus feat selection - improved cross class compatibility.
-Implemented hexes for Hexcrafter as part of the Arcana selection - improved cross compatibility.
-Buffed Elemental Bloodrager Elemental Strike, now is always on and the lvl 20 power is an on crit burst effect.
-Winter Witch Prc advances all patrons for use with Second Patron (Tabletop Tweaks)
-Stigmatized Witch regains Patron feature - select Ember's initial patron in the optiosn menu
-Dispels are now buff/debuff safe - dispel magic series and slayer Dispelling Attack don't dispel buffs on user's allies or debuffs on their enemies. 
+Implemented additional bonus feat options for Arcane Rider as part of the standard Magus bonus feat selection - improved cross class compatibility.  
+Implemented hexes for Hexcrafter as part of the Arcana selection - improved cross compatibility.  
+Buffed Elemental Bloodrager Elemental Strike, now is always on and the lvl 20 power is an on crit burst effect.  
+Winter Witch Prc advances all patrons for use with Second Patron (Tabletop Tweaks)  
+Stigmatized Witch regains Patron feature - select Ember's initial patron in the optiosn menu  
+Dispels are now buff/debuff safe - dispel magic series and slayer Dispelling Attack don't dispel buffs on user's allies or debuffs on their enemies.   
 
 
 ### New Content
