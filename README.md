@@ -21,38 +21,38 @@ Dispels are now buff/debuff safe - dispel magic series and slayer Dispelling Att
 
 
 ### New Content
-Adding Kineticist's missing Internal Buffer feature.
-Added Azata bloodline for Sorcerer and Eldritch Scion - see https://metzo.miraheze.org/wiki/Azata_Bloodline_(Sorcerer).
-Witch Patrons: Animal, Death, Light, Plague Protection - more to come as spells they need are implemented
-Burst Of Radiance spell.
-Blood Havoc Sorcerer/Eldritch Scion/Bloodrager Bloodline Mutation - deal extra damage with damaging spells. Only available via bonus feat selector for now, trading in bloodline powers is a doozy to implement.
-Armor Of The Pit - tiefling racial feat, +2 natural armor, if the character has the alternate racial trait scaled skin gives +1 natural armor and the missing resists instead
-Greater Shocking Grasp - 3rd level touch attack spell, 1d6/cl max 10 elec damage, fort save or be stunned for 1d4 rounds on hit
-Storming Grasp line - Shocking Grasp variants with increased spell level and 1 hit per caster level
+Adding Kineticist's missing Internal Buffer feature.  
+Added Azata bloodline for Sorcerer and Eldritch Scion - see https://metzo.miraheze.org/wiki/Azata_Bloodline_(Sorcerer).  
+Witch Patrons: Animal, Death, Light, Plague Protection - more to come as spells they need are implemented  
+Burst Of Radiance spell.  
+Blood Havoc Sorcerer/Eldritch Scion/Bloodrager Bloodline Mutation - deal extra damage with damaging spells. Only available via bonus feat selector for now, trading in bloodline powers is a doozy to implement.  
+Armor Of The Pit - tiefling racial feat, +2 natural armor, if the character has the alternate racial trait scaled skin gives +1 natural armor and the missing resists instead  
+Greater Shocking Grasp - 3rd level touch attack spell, 1d6/cl max 10 elec damage, fort save or be stunned for 1d4 rounds on hit  
+Storming Grasp line - Shocking Grasp variants with increased spell level and 1 hit per caster level  
 
 ### Known Issues
-Multi hit touch spells leave extra icon on the dash, do not always multi hit across multiple turns
+Multi hit touch spells leave extra icon on the dash, do not always multi hit across multiple turns  
 
 
 ## Changelog
 
 ### 1.2.0 (in progress, unreleased)
-Unlimited sorcerer claw turns
-Convert sorcerer dragon claws into a single power
-Armor Of The Pit (Tiefling Racial Feat)
-New Electrical Spells
-All Tome Of The Firebird bugfixes ported
-    Radiance +6 (uncorrupted) now gets Holy like it should
-    Order Of The Star Channelling works - progresses Channel Energy / Lay On Hands
-    Fixed the chibi dragon from Dawn Of Dragons giving extra hits
-    Flames Shield Wild Talent halves incoming cold damage
+Unlimited sorcerer claw turns  
+Convert sorcerer dragon claws into a single power  
+Armor Of The Pit (Tiefling Racial Feat)  
+New Electrical Spells  
+All Tome Of The Firebird bugfixes ported  
+    Radiance +6 (uncorrupted) now gets Holy like it should  
+    Order Of The Star Channelling works - progresses Channel Energy / Lay On Hands  
+    Fixed the chibi dragon from Dawn Of Dragons giving extra hits  
+    Flames Shield Wild Talent halves incoming cold damage  
 
 ### 1.1.0
 
-Added Blood Havoc Bloodline Mutation
-Added Burst Of Radiance spell
-Added new Witch Patrons: Animal, Death, Light, Plague, Protection
-Added restored Stigmatized Witch Patron
-Added option to select Ember's Patron
-Added Winter Witch PRC to witch progressions for Tabletop Tweaks Second Patrons
-Fixed Icons on Witch Patron spell features
+Added Blood Havoc Bloodline Mutation  
+Added Burst Of Radiance spell  
+Added new Witch Patrons: Animal, Death, Light, Plague, Protection  
+Added restored Stigmatized Witch Patron  
+Added option to select Ember's Patron  
+Added Winter Witch PRC to witch progressions for Tabletop Tweaks Second Patrons  
+Fixed Icons on Witch Patron spell features  
