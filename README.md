@@ -5,6 +5,7 @@ This mod is a replacement for Tome Of The Firebird, which I have lost repo acces
 ## Contents
 ### Bugfixes
 Removed redundant add/remove of Arcane Weapon on Eldritch Scion.  
+
 Witch Patron Spell features have proper icons  
 Radiance +6 (uncorrupted) now gets Holy like it should  
 Made Order Of The Stars's Calling Channeling support ability work.   
