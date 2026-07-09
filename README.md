@@ -5,7 +5,6 @@ This mod is a replacement for Tome Of The Firebird, which I have lost repo acces
 ## Contents
 ### Bugfixes
 Removed redundant add/remove of Arcane Weapon on Eldritch Scion.  
-
 Witch Patron Spell features have proper icons  
 Radiance +6 (uncorrupted) now gets Holy like it should  
 Made Order Of The Stars's Calling Channeling support ability work.   
@@ -14,9 +13,9 @@ Fixed extra hits from the Dawn Of Dragons Chibi
 
 ### Modifications
 Implemented additional bonus feat options for Arcane Rider as part of the standard Magus bonus feat selection - improved cross class compatibility.  
-Implemented hexes for Hexcrafter as part of the Arcana selection - improved cross compatibility.  
+Implemented hexes for Hexcrafter as part of the Arcana selection - improved cross compatibility.   
 Buffed Elemental Bloodrager Elemental Strike, now is always on and the lvl 20 power is an on crit burst effect.  
-Winter Witch Prc advances all patrons for use with Second Patron (Tabletop Tweaks)  
+Winter Witch Prc advances all patrons for use with Second Patron (Tabletop Tweaks)    
 Stigmatized Witch regains Patron feature - select Ember's initial patron in the optiosn menu  
 Dispels are now buff/debuff safe - dispel magic series and slayer Dispelling Attack don't dispel buffs on user's allies or debuffs on their enemies.   
 
